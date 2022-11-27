@@ -2,8 +2,11 @@
 
 .header {
     padding: 8px;
-    background-color: #222;
-    /* position: fixed; */
+    /* background-color: #222; */
+    /* background-color: #000; */
+    /* filter: blur(8px); */
+    backdrop-filter: blur(15px);
+    position: fixed;
     width: 100%;
 }
 
@@ -33,6 +36,7 @@
 .links li a {
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
+    position: relative;
     /* color: #B9C8FF; */
     color: #0070f3;
     padding: 10px;
@@ -40,9 +44,18 @@
     transition: .3s all ease-in-out;
 }
 
-.links li a:hover {
-    color: #5F1FBE;
-    background-color: #B9C8FF;
+.links li a::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.2s;
+}
+.links li a:hover::before{
+    width: 100%;
 }
 
 /* ==================================== */
@@ -91,7 +104,8 @@
 }
 
 .more_button:hover {
-    background-color: #8C69F0;
+    /* background-color: #8C69F0; */
+    background-color: #0070f3;
 }
 
 /* .more-button:hover{
