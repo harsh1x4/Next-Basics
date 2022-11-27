@@ -46,6 +46,15 @@ export default function Home() {
               </p>
             </a>
           </Link>
+
+          <Link href='/404' legacyBehavior>
+            <a rel="noopener noreferrer" className={styles.card}>
+              <h2>404 Page &rarr;</h2>
+              <p>
+              Your 404 page should show off your creativity and personality – and help users. Here are 37 awesome examples of 404 pages to inspire you.
+              </p>
+            </a>
+          </Link>
         </div>
       </main>
 
