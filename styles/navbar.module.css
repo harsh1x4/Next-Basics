@@ -16,9 +16,20 @@
     align-items: center;
 }
 
+.logo img {
+    display: flex;
+    align-items: center;
+    filter: invert(1);
+    width: 50px;
+    height: 50px;
+    margin: 0 5px 0 0;
+}
+
 .nav .nav_logo {
     font-family: 'Pacifico', cursive;
     font-size: 35px;
+    display: flex;
+    align-items: center;
     /* color: #B9C8FF; */
     color: #0070f3;
     cursor: pointer;
@@ -54,7 +65,8 @@
     background-color: #fff;
     transition: all 0.2s;
 }
-.links li a:hover::before{
+
+.links li a:hover::before {
     width: 100%;
 }
 

@@ -1,10 +1,16 @@
 import styles from '../../styles/navbar.module.css'
+// import styles from '../styles/Home.module.css'
+import Image from 'next/image'
+import Link from 'next/link'
+
 const Navbar = () => {
     return (
         <header className={styles.header}>
             <nav className={styles.nav}>
                 <div className={styles.nav_logo}>
-                    <span>Responsive Navbar</span>
+                    <span className={styles.logo}>
+                        <Image src="/favicon.ico" alt="Vercel Logo" width={72} height={16} />
+                    </span><span>Responsive Navbar</span>
                 </div>
                 <div className={styles.toggle_button}>
                     <button className={styles.more_button} aria_label="Menu Button">
@@ -21,12 +27,27 @@ const Navbar = () => {
                     </button>
                 </div>
                 <ul className={styles.links}>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Skills</a></li>
-                    <li><a href="#">Work</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
+
+                    <li>
+                        <Link href="/home" legacyBehavior>
+                            <a>Home</a>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="/about" legacyBehavior>
+                            <a>About</a>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="/404" legacyBehavior>
+                            <a>404</a>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="/contact" legacyBehavior>
+                            <a>Contact</a>
+                        </Link>
+                    </li>
                 </ul>
             </nav>
         </header>
