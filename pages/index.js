@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -17,40 +18,38 @@ export default function Home() {
         </h1>
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
+          <Link href='/home' className={styles.card}>
             <h2>Home &rarr;</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor deleniti quis commodi corrupti veritatis natus sint alias sequi architecto aut.</p>
-          </a>
+          </Link>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>About &rarr;</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi at explicabo modi iste, ipsam qui corrupti quibusdam. Earum, suscipit vel!</p>
-          </a>
+          <Link href='/about' legacyBehavior>
+            <a className={styles.card}>
+              <h2>About &rarr;</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi at explicabo modi iste, ipsam qui corrupti quibusdam. Earum, suscipit vel!</p>
+            </a>
+          </Link>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Blog &rarr;</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem repellat ratione veritatis optio in tempora quidem eligendi mollitia maiores fugiat?
-            </p>
-          </a>
+          <Link href='/blog' legacyBehavior>
+            <a className={styles.card}>
+              <h2>Blog &rarr;</h2>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem repellat ratione veritatis optio in tempora quidem eligendi mollitia maiores fugiat?
+              </p>
+            </a>
+          </Link>
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.card}
-          >
-            <h2>Contact &rarr;</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis blanditiis libero velit quod asperiores vero aliquam eveniet unde enim. Facere.
-            </p>
-          </a>
+          <Link href='/contact' legacyBehavior>
+            <a rel="noopener noreferrer" className={styles.card}>
+              <h2>Contact &rarr;</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis blanditiis libero velit quod asperiores vero aliquam eveniet unde enim. Facere.
+              </p>
+            </a>
+          </Link>
         </div>
       </main>
 
-      {/* <footer className={styles.footer}>
+      <footer className={styles.footer}>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
@@ -61,7 +60,7 @@ export default function Home() {
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
-      </footer> */}
+      </footer>
     </div>
   )
 }

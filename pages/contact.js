@@ -1,9 +1,7 @@
-import styles from '../styles/Home.module.css'
-
 const contact = () => {
     return (
         <>
-            <h1 className={styles.title}>
+            <h1>
                 Welcome to <a href="#">Contact</a>
             </h1>
         </>
