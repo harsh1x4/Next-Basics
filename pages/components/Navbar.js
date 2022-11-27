@@ -8,9 +8,10 @@ const Navbar = () => {
         <header className={styles.header}>
             <nav className={styles.nav}>
                 <div className={styles.nav_logo}>
-                    <span className={styles.logo}>
+                    {/* <span className={styles.logo}>
                         <Image src="/favicon.ico" alt="Vercel Logo" width={72} height={16} />
-                    </span><span>Responsive Navbar</span>
+                    </span> */}
+                    <span>Navbar</span>
                 </div>
                 <div className={styles.toggle_button}>
                     <button className={styles.more_button} aria_label="Menu Button">
