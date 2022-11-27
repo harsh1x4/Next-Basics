@@ -20,13 +20,13 @@ export default function Home() {
         <div className={styles.grid}>
           <Link href='/home' className={styles.card}>
             <h2>Home &rarr;</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor deleniti quis commodi corrupti veritatis natus sint alias sequi architecto aut.</p>
+            <p>A home page is the primary web page that a visitor will view when they navigate to a website via a search engine, and it may also function as a landing page to attract visitors.. In some cases, the home page is a site directory, particularly when a website has multiple home pages.</p>
           </Link>
 
           <Link href='/about' legacyBehavior>
             <a className={styles.card}>
               <h2>About &rarr;</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi at explicabo modi iste, ipsam qui corrupti quibusdam. Earum, suscipit vel!</p>
+              <p>An excellent About page not only narrates your story, values, and gives an inside look into how your business came to be, but it also helps sell. When prospects learn your story and connect with it, they’re likely to buy from you. A well-planned About Us page can do all this!</p>
             </a>
           </Link>
 
@@ -42,7 +42,7 @@ export default function Home() {
             <a rel="noopener noreferrer" className={styles.card}>
               <h2>Contact &rarr;</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis blanditiis libero velit quod asperiores vero aliquam eveniet unde enim. Facere.
+                The contact us page also includes a physical address, email address, and links to their social media profiles.
               </p>
             </a>
           </Link>
@@ -51,7 +51,7 @@ export default function Home() {
             <a rel="noopener noreferrer" className={styles.card}>
               <h2>404 Page &rarr;</h2>
               <p>
-              Your 404 page should show off your creativity and personality – and help users. Here are 37 awesome examples of 404 pages to inspire you.
+                Your 404 page should show off your creativity and personality – and help users. Here are 37 awesome examples of 404 pages to inspire you.
               </p>
             </a>
           </Link>
