@@ -29,8 +29,9 @@
 /* .blog_info{
   display: flex;
 } */
-.blog_info h2{
+.blog_info .title{
   /* text-align: center; */
+  font-size: 1.5rem;
   font-weight: 600;
   text-decoration: underline;
 }

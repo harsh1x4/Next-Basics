@@ -39,7 +39,7 @@ const fetchedData = ({ data }) => {
                 <div className={styles.card} key={data.id}>
                     <h3>{data.id}</h3>
                     <div className={styles.blog_info}>
-                        <h2>{data.title}</h2>
+                        <h2 className={styles.title}>{data.title}</h2>
                         <p>{data.body}</p>
                     </div>
                 </div>
