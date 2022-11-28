@@ -1,8 +1,9 @@
 import styles from '../styles/Home.module.css'
-
+import Navbar from './components/Navbar.js'
 const about = () => {
     return (
         <>
+        <Navbar/>
             <div className={styles.centerDiv}>
                 <center><h1>About</h1></center>
                 <a className={styles.card}>

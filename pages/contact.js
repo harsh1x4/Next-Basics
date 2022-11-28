@@ -1,7 +1,10 @@
 import styles from '../styles/Home.module.css'
+import Navbar from './components/Navbar.js'
+
 const contact = () => {
     return (
         <>
+        <Navbar/>
             <div className={styles.centerDiv}>
                 <center><h1>Contact</h1></center>
                 <a className={styles.card}>
