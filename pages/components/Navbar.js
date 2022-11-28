@@ -25,12 +25,15 @@ const Navbar = () => {
     return (
         <header className={styles.header}>
             <nav className={styles.nav}>
-                <div className={styles.nav_logo}>
-                    {/* <span className={styles.logo}>
-                        <Image src="/favicon.ico" alt="Vercel Logo" width={72} height={16} />
-                    </span> */}
-                    <span>Responsive Navbar</span>
-                </div>
+                <Link href="/">
+                    <div className={styles.nav_logo}>
+                        <span className={styles.logo}>
+                        {/* <Image src="/favicon.ico" alt="Vercel Logo" width={72} height={16} />
+                        <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} /> */}
+                    </span>
+                        <span>Responsive Navbar</span>
+                    </div>
+                </Link>
                 <div onClick={toggleNav} className={`${styles.toggle_button} ${classActive}`} >
                     <button className={styles.more_button} aria_label="Menu Button">
                         <div className={styles.menu_icon_wrapper}>
