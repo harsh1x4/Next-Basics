@@ -2,9 +2,6 @@
 
 .header {
     padding: 8px;
-    /* background-color: #222; */
-    /* background-color: #000; */
-    /* filter: blur(8px); */
     backdrop-filter: blur(15px);
     position: fixed;
     width: 100%;
@@ -30,7 +27,6 @@
     font-size: 35px;
     display: flex;
     align-items: center;
-    /* color: #B9C8FF; */
     color: #0070f3;
     cursor: pointer;
 }
@@ -48,7 +44,6 @@
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
     position: relative;
-    /* color: #B9C8FF; */
     color: #0070f3;
     padding: 10px;
     font-weight: 500;
@@ -69,11 +64,6 @@
 .links li a:hover::before {
     width: 100%;
 }
-
-/* ==================================== */
-/* ====Responsive navbar menu icon===== */
-/* ===============Start================ */
-/* ==================================== */
 
 .toggle_button {
     /* position: relative; */
@@ -97,8 +87,6 @@
 }
 
 .more_button {
-    /* background-color: #5c67ff; */
-    /* box-shadow: 0px 0px 0px 4px rgba(92, 103, 255, .3); */
     border-radius: 50%;
     background-color: transparent;
     width: 50px;
@@ -116,13 +104,9 @@
 }
 
 .more_button:hover {
-    /* background-color: #8C69F0; */
     background-color: #0070f3;
 }
 
-/* .more-button:hover{
-    background-color: #8C69F0;
-} */
 
 .more_button:focus {
     outline: 0
@@ -168,11 +152,6 @@
     }
 }
 
-/* ==================================== */
-/* ====Responsive navbar menu icon===== */
-/* =================End================ */
-/* ==================================== */
-
 @media only screen and (max-width: 780px) {
     .toggle_button {
         display: flex;
@@ -195,6 +174,5 @@
     .links.active {
         left: 0;
     }
-
 
 }

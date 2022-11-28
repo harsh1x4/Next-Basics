@@ -16,9 +16,6 @@ const Navbar = () => {
                 <div className={styles.toggle_button}>
                     <button className={styles.more_button} aria_label="Menu Button">
                         <div className={styles.menu_icon_wrapper}>
-                            {/* <div className="menu_icon_line half first"></div>
-                            <div className="menu_icon_line"></div>
-                            <div className="menu_icon_line half last"></div> */}
                             <div className={`${styles.menu_icon_line} ${styles.half} ${styles.first}`}></div>
                             <div className={styles.menu_icon_line}></div>
                             <div className={`${styles.menu_icon_line} ${styles.half} ${styles.last}`}></div>
