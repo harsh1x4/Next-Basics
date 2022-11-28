@@ -30,8 +30,8 @@ const blog = ({ data }) => {
           <div className={styles.grid}>
             {data.slice(0, 6).map((curElem) => {
               return (
-                <Link href={`/blog/${curElem.id}`}>
-                  <div key={curElem.id} className={styles.card}>
+                <Link key={curElem.id}  href={`/blog/${curElem.id}`}>
+                  <div className={styles.card}>
                     <h3>{curElem.id}</h3>
                     <h2>{curElem.title}</h2>
                   </div>
