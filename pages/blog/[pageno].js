@@ -1,3 +1,5 @@
+import Navbar from '../components/Navbar.js'
+import styles from '../../styles/blogIndex.module.css'
 export const getStaticPaths = async () => {
     const res = await fetch("https://jsonplaceholder.typicode.com/posts");
     const data = await res.json();
@@ -32,10 +34,15 @@ export const getStaticProps = async (context) => {
 const fetchedData = ({ data }) => {
     return (
         <>
-            <div key={data.id}>
-                <h3>{data.id}</h3>
-                <h2>{data.title}</h2>
-                <p>{data.body}</p>
+            <Navbar />
+            <div className={styles.main}>
+                <div className={styles.card} key={data.id}>
+                    <h3>{data.id}</h3>
+                    <div className={styles.blog_info}>
+                        <h2>{data.title}</h2>
+                        <p>{data.body}</p>
+                    </div>
+                </div>
             </div>
         </>
     )

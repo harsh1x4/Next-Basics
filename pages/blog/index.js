@@ -25,17 +25,21 @@ const blog = ({ data }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <div className={styles.main}>
-        {data.slice(0, 5).map((curElem) => {
-          return (
-            <div key={curElem.id}>
-              <h3>{curElem.id}</h3>
-              <Link href={`/blog/${curElem.id}`}>
-                <h2>{curElem.title}</h2>
-              </Link>
-            </div>
-          );
-        })}
+      <div className={styles.container}>
+        <div className={styles.main}>
+          <div className={styles.grid}>
+            {data.slice(0, 6).map((curElem) => {
+              return (
+                <Link href={`/blog/${curElem.id}`}>
+                  <div className={styles.card} key={curElem.id}>
+                    <h3>{curElem.id}</h3>
+                    <h2>{curElem.title}</h2>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </>
   );
