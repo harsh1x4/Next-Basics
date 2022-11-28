@@ -19,11 +19,9 @@ const Navbar = () => {
                             {/* <div className="menu_icon_line half first"></div>
                             <div className="menu_icon_line"></div>
                             <div className="menu_icon_line half last"></div> */}
-                            {/* <div className={`${styles.menu_icon_line}, ${styles.half}, ${styles.first}`}></div> */}
+                            <div className={`${styles.menu_icon_line} ${styles.half} ${styles.first}`}></div>
                             <div className={styles.menu_icon_line}></div>
-                            <div className={styles.menu_icon_line}></div>
-                            <div className={styles.menu_icon_line}></div>
-                            {/* <div className={`${styles.menu_icon_line}, ${styles.half}, ${styles.last}`}></div> */}
+                            <div className={`${styles.menu_icon_line} ${styles.half} ${styles.last}`}></div>
                         </div>
                     </button>
                 </div>
