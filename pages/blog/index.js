@@ -31,7 +31,7 @@ const blog = ({ data }) => {
             {data.slice(0, 6).map((curElem) => {
               return (
                 <Link href={`/blog/${curElem.id}`}>
-                  <div className={styles.card} key={curElem.id}>
+                  <div key={curElem.id} className={styles.card}>
                     <h3>{curElem.id}</h3>
                     <h2>{curElem.title}</h2>
                   </div>
