@@ -47,13 +47,18 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link href="/404" legacyBehavior>
-                            <a>404</a>
+                        <Link href="/contact" legacyBehavior>
+                            <a>Contact</a>
                         </Link>
                     </li>
                     <li>
-                        <Link href="/contact" legacyBehavior>
-                            <a>Contact</a>
+                        <Link href="/blog" legacyBehavior>
+                            <a>Blog</a>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="/404" legacyBehavior>
+                            <a>404</a>
                         </Link>
                     </li>
                 </ul>
