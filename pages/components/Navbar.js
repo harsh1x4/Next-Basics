@@ -1,9 +1,27 @@
 import styles from '../../styles/navbar.module.css'
 // import styles from '../styles/Home.module.css'
 import Image from 'next/image'
+import { useState } from 'react'
 import Link from 'next/link'
 
 const Navbar = () => {
+    const [open, setOpen] = useState(false)
+    const [classActive, setClassActive] = useState(``)
+
+    const toggleNav = () => {
+        if (open === false) {
+            setClassActive(`${styles.active}`),
+                setOpen(true),
+                console.log(open)
+        }
+
+        if (open === true) {
+            setClassActive(``),
+                setOpen(false),
+                console.log(open)
+        }
+    }
+
     return (
         <header className={styles.header}>
             <nav className={styles.nav}>
@@ -11,9 +29,9 @@ const Navbar = () => {
                     {/* <span className={styles.logo}>
                         <Image src="/favicon.ico" alt="Vercel Logo" width={72} height={16} />
                     </span> */}
-                    <span>Navbar</span>
+                    <span>Responsive Navbar</span>
                 </div>
-                <div className={styles.toggle_button}>
+                <div onClick={toggleNav} className={`${styles.toggle_button} ${classActive}`} >
                     <button className={styles.more_button} aria_label="Menu Button">
                         <div className={styles.menu_icon_wrapper}>
                             <div className={`${styles.menu_icon_line} ${styles.half} ${styles.first}`}></div>
@@ -22,7 +40,7 @@ const Navbar = () => {
                         </div>
                     </button>
                 </div>
-                <ul className={styles.links}>
+                <ul className={`${styles.links} ${classActive}`}>
 
                     <li>
                         <Link href="/home" legacyBehavior>
