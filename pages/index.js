@@ -21,10 +21,6 @@ export default function Home() {
           </h1>
 
           <div className={styles.grid}>
-            <Link href='/home' className={styles.card}>
-              <h2>Home &rarr;</h2>
-              <p>A home page is the primary web page that a visitor will view when they navigate to a website via a search engine, and it may also function as a landing page to attract visitors.. In some cases, the home page is a site directory, particularly when a website has multiple home pages.</p>
-            </Link>
 
             <Link href='/about' legacyBehavior>
               <a className={styles.card}>

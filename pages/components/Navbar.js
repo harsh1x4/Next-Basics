@@ -41,12 +41,6 @@ const Navbar = () => {
                     </button>
                 </div>
                 <ul className={`${styles.links} ${classActive}`}>
-
-                    <li>
-                        <Link href="/home" legacyBehavior>
-                            <a>Home</a>
-                        </Link>
-                    </li>
                     <li>
                         <Link href="/about" legacyBehavior>
                             <a>About</a>

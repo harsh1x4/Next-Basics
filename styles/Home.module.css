@@ -92,6 +92,13 @@
   flex-direction: column;
   height: 100vh;
 }
+.centerImage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 85vh;
+}
 
 .card:hover,
 .card:focus,
