@@ -3,8 +3,20 @@ import Image from 'next/image';
 import styles from '../../styles/blogIndex.module.css'
 import Navbar from '../components/Navbar.js'
 import Head from 'next/head'
+import Link from 'next/link'
 
-const blog = () => {
+export const getStaticProps = async () => {
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const data = await res.json();
+
+  return {
+    props: {
+      data,
+    },
+  }
+}
+
+const blog = ({ data }) => {
   return (
     <>
       <Head>
@@ -13,30 +25,18 @@ const blog = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      {/* <div className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="#">Blog</a>
-        </h1>
-        <div style={{ "text-align": "center", "display": "flex", "justify-content": "center" }}>
-          <div className={styles.grid}>
-            <a className={styles.card}>
-              <Image src="https://images.pexels.com/photos/1591056/pexels-photo-1591056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" height={300} width={500} alt="blog3"></Image>
-            </a>
-            <a className={styles.card}>
-              <Image src="https://images.pexels.com/photos/1591056/pexels-photo-1591056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" height={300} width={500} alt="blog4"></Image>
-            </a>
-            <a className={styles.card}>
-              <Image src="https://images.pexels.com/photos/1591056/pexels-photo-1591056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" height={300} width={500} alt="blog3"></Image>
-            </a>
-            <a className={styles.card}>
-              <Image src="https://images.pexels.com/photos/1591056/pexels-photo-1591056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" height={300} width={500} alt="blog4"></Image>
-            </a>
-            <a className={styles.card}>
-              <Image src="https://images.pexels.com/photos/1591056/pexels-photo-1591056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" height={300} width={500} alt="blog3"></Image>
-            </a>
-          </div>
-        </div>
-      </div> */}
+      <div className={styles.main}>
+        {data.slice(0, 5).map((curElem) => {
+          return (
+            <div key={curElem.id}>
+              <h3>{curElem.id}</h3>
+              <Link href={`/blog/${curElem.id}`}>
+                <h2>{curElem.title}</h2>
+              </Link>
+            </div>
+          );
+        })}
+      </div>
     </>
   );
 };
