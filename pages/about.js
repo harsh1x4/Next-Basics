@@ -13,7 +13,7 @@ const about = () => {
         <Navbar/>
             <div className={styles.centerDiv}>
                 <center><h1 className={styles.title}>About Page</h1></center>
-                <Image src="/about.jpg" width={500} height={500}></Image>
+                <Image src="/about.jpg" width={500} height={500} alt="about iamge"></Image>
             </div>
         </>
     )
