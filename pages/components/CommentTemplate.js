@@ -1,5 +1,5 @@
 
-const CommentsTemplate = ({comment}) => {
+const CommentTemplate = ({comment}) => {
   return (
     <div className='card'>
         <h2 className='text-xl font-bold'>{comment.name}</h2>
@@ -9,4 +9,4 @@ const CommentsTemplate = ({comment}) => {
   )
 }
 
-export default CommentsTemplate;
+export default CommentTemplate;

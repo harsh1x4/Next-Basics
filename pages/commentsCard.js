@@ -1,6 +1,6 @@
 import data from '../utils/data';
 import Head from 'next/head';
-import CommentsTemplate from './components/CommentsTemplate';
+import CommentTemplate from './components/CommentTemplate';
 
 const commentsCard = () => {
   return (
@@ -12,7 +12,7 @@ const commentsCard = () => {
       </Head>
       <div className='grid grid-cols-1 gap-1 md:grid-cols-3 lg:grid-cols-4'>
         {data.comments.map((comment) => (
-          <CommentsTemplate comment={comment} key={comment.id} />
+          <CommentTemplate comment={comment} key={comment.id} />
         ))}
       </div>
     </>
