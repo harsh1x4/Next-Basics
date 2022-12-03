@@ -1,5 +1,5 @@
 import data from '../utils/data';
-import CommentsTemplate from './components/commentsTemplate';
+import CommentsTemplate from './components/CommentsTemplate';
 
 const commentsCard = () => {
   return (
