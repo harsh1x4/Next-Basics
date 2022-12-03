@@ -1,6 +1,6 @@
 import data from '../utils/data';
 import Head from 'next/head';
-import CommentTemplate from './components/CommentTemplate';
+// import CommentTemplate from './components/CommentTemplate';
 
 const commentsCard = () => {
   return (
